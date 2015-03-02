@@ -23,3 +23,21 @@ Car.prototype = Object.create(LandVehicle.prototype);
 
 Plane.prototype = Object.create(Aircraft.prototype);
 
+///////////////////
+
+
+var extendee = {car: "new", smell: "good", truck: "muddy"};
+
+var extended = _.extend({}, extendee);
+
+
+
+///////////////////
+
+var params = function(options){
+  optDefault = {material: "wood"};
+  optionTwo = {building: "large"};
+  finalOptions = _.extend({}, optDefault, optionTwo);
+  return finalOptions;
+};
+
