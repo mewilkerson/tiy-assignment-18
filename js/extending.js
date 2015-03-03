@@ -32,12 +32,11 @@ var extended = _.extend({}, extendee);
 
 
 
-///////////////////
+/////////////////
 
 var params = function(options){
-  optDefault = {material: "wood"};
-  optionTwo = {building: "large"};
-  finalOptions = _.extend({}, optDefault, optionTwo);
-  return finalOptions;
-};
-
+  var optionDefaults = {page: 1, material: "wood", building: "large"};
+  
+  var overRide = _.extend({}, optionDefaults, options);
+    return overRide;
+}
